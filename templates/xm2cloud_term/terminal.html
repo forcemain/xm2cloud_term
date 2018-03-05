@@ -1,0 +1,54 @@
+{% extends 'xm2cloud_term/_base.html' %}
+{% load static %}
+
+{% block styles %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'xm2cloud_term/js/xterm/xterm.css' %}">
+    <link rel="stylesheet" href="{% static 'xm2cloud_term/js/xterm/addons/fullscreen/fullscreen.css' %}"></link>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'xm2cloud_term/js/xterm/xterm.js' %}"></script>
+    <script src="{% static 'xm2cloud_term/js/xterm/addons/attach/attach.js' %}"></script>
+    <script src="{% static 'xm2cloud_term/js/xterm/addons/fullscreen/fullscreen.js' %}"></script>
+    {{ block.super }}
+    <script type="text/javascript">
+        var instance = "{{ object.pk }}"
+            ,wsserver = "{{ wsserver }}"
+            ,protocol = "{{ protocol }}";
+        // for open terminal
+        $(function () {
+            var ws_protocol = (location.protocol === "https:") ? "wss://" : "ws://";
+            $('#terminal').open_terminal({
+                "instance": instance,
+                "protocol": protocol,
+                "wsserver": ws_protocol + wsserver
+            });
+        });
+    </script>
+
+{% endblock %}
+
+{% block head_container %}
+    <div class="container">
+        <div class="lf">
+            <a class="shtitle" href="#" onclick="location.reload();">
+                Conn to {{ object.auth.username }}@{{ object.remoteip }}:{{ object.ssh_port }} ...
+            </a>
+        </div>
+        <div class="rt">
+            <a class="refresh" href="#" onclick="location.reload();"></a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block main_container %}
+    <div class="container">
+        <div id="terminal"></div>
+        <div class="clear"></div>
+    </div>
+{% endblock %}
+
+{% block foot_container %}
+    <div class="container"></div>
+{% endblock %}

@@ -1,0 +1,37 @@
+/* for base style*/
+.lf {
+    float: left;
+}
+.rt {
+    float: right;
+}
+.clear {
+    clear: both;
+}
+html {
+    background-color: #000000;
+}
+body {
+    background-color: #000000;
+}
+/* for background style */
+.web-head {
+    background-color: darkgreen;
+    height: 20px;
+    padding: 2px;
+    color: #ffffff;
+}
+.web-head .container {
+    line-height: 20px;
+}
+.web-head .container a {
+    color: #ffffff;
+}
+.web-head .container .rt a:hover {
+    text-decoration: underline;
+}
+.web-main {
+    color: #ffffff;
+    background-color: #000000;
+    border: dashed 1px darkgreen;
+}

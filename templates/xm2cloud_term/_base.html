@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html {% block  html_attribs %}{% endblock %}>
+{% block html %}
+    <head>
+    {% block head %}
+        {% block meta %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="XM2CLOUD 是一款由XM自研的自动化运维管理平台软件，能够帮助企业方便的管理云资源,控好云成本,用好云服务.">
+        <meta name="keywords" content="云配置管理平台,云费用管理平台,云监控管理平台,云DEVOPS协作平台">
+        <meta name="author" content="xmdevops@vip.qq.com">
+        {% endblock %}
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'xm2cloud_term/img/favicon.ico' %}">
+        <link rel="icon" type="image/x-icon" href="{% static 'xm2cloud_term/img/favicon.ico' %}">
+        <title>{{ title|default:'管理终端 | XM2CLOUD - 业界领先的云端运维平台' }}</title>
+        {% block styles %}
+        <!--
+        1. reset.min.css是将所有的浏览器的自带样式重置掉,这样更易于保持各浏览器渲染的一致性(可选)
+        2. normalize.min.css是尽量保留浏览器的默认样式,精确定位需要重置的样式(可选)
+        -->
+        <link rel="stylesheet" type="text/css" href="{% static 'xm2cloud_term/css/reset.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'xm2cloud_term/css/normalize.min.css' %}">
+        <!--
+        1. main.css是xm2cloud_term应用自定义样式
+        -->
+        <link rel="stylesheet" href="{% static 'xm2cloud_term/css/main.css' %}">
+        {% endblock %}
+        <!--[if lt IE 9]>
+        <script src="{% static 'xm2cloud_term/js/html5shiv.min.js' %}"></script>
+        <script src="{% static 'xm2cloud_term/js/respond.min.js' %}"></script>
+        <![endif]-->
+        <script src="{% static 'xm2cloud_term/js/jquery.min.js' %}"></script>
+    {% endblock %}
+    </head>
+    <body {% block body_attribs %}{% endblock %}>
+        {% block body %}
+            <div class="web-head">
+            {% block head_container %}
+            {% endblock %}
+            </div>
+            <div class="web-main">
+            {% block main_container %}
+            {% endblock %}
+            </div>
+            <div class="web-foot">
+            {% block foot_container %}
+            {% endblock %}
+            </div>
+        {% endblock %}
+        {% block scripts %}
+            <!--
+            1. main.js是xm2cloud_term应用自定义脚本
+            -->
+            <script src="{% static 'xm2cloud_term/js/main.js' %}"></script>
+        {% endblock %}
+    </body>
+{% endblock %}
+</html>
