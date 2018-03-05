@@ -14,8 +14,10 @@
 ***
 
 #### 效果展示
-
-
+![start_connect](https://raw.githubusercontent.com/xmdevops/xm2cloud_term/master/docs/screens/start_connect.png)
+![connect_success](https://raw.githubusercontent.com/xmdevops/xm2cloud_term/master/docs/screens/connect_success.png)
+![htop_screen](https://raw.githubusercontent.com/xmdevops/xm2cloud_term/master/docs/screens/htop_screen.png)
+![vim_screen](https://raw.githubusercontent.com/xmdevops/xm2cloud_term/master/docs/screens/vim_screen.png)
 ***
 
 #### Copyright:
