@@ -1,6 +1,6 @@
 # xm2cloud_term
 #### 简单介绍
-> [xm2cloud_term](https://github.com/xmdevops/xm2cloud_term)基于Django+Channels+Xterm+IOLoop实现,目前作为[xm2cloud_cmp]()平台基础组件.
+> [xm2cloud_term](https://github.com/xmdevops/xm2cloud_term)基于Django+Channels+Xterm+IOLoop的WebSSH实现,目前主要作为[xm2cloud_cmp]()平台基础组件.
 
 ***
 
